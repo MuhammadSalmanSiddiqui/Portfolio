@@ -1,0 +1,254 @@
+@import '../../styles/variables.scss';
+
+.page.slide-enter {
+	.about-item {
+		.ball {
+			z-index: 0;
+		}
+	}
+}
+.about-wrapper {
+	margin-bottom: -80px;
+	.base-title {
+		margin-bottom: 0;
+		@include mobile {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.about-info {
+	position: relative;
+	color: $blue-about;
+	max-width: 650px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: -8rem;
+	@include mobile {
+			max-width: 250px;
+			margin-top: -3rem;
+			max-width: 450px;
+			margin: 1rem;
+	}
+	.about-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		.title {
+			font-family: $cs;
+			font-size: 18px;
+			letter-spacing: 2px;
+			line-height: normal;
+			width: 50%;
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+		.title,
+		.ball {
+			position: absolute;
+		}
+		.show{
+			opacity: 0;
+			transition: all .4s;
+		}
+		.ball {
+			width: 23px;
+			height: 23px;
+			z-index: 5;
+			cursor: pointer;
+			transition: all .2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			&::after {
+				content: '';
+				display: block;
+				width: 12px;
+				height: 12px;
+				background: $blue-main;
+				border-radius: 50%;
+			}
+		}
+		.ball.active {
+			transform: scale(0);
+			~ .show {
+				opacity: 1;
+			}
+		}
+	}
+	.brain{
+		.ball {
+			left: 47%;
+			top: 26%;
+			@include mobile {
+				left: 46.5%;
+				top: 22%;
+			}
+			@include tablet {
+				left: 46.5%;
+				top: 22%;
+			}
+		}
+		.title {
+			right: -17%;
+			top: 16%;
+			transform: rotate(20deg);
+			text-align: center;
+			@include mobile {
+				top: 16%;
+				right: 0%
+			}
+			@include mobileSmall {
+				top: 10%;
+				right: 0%;
+			}
+		}
+		.line-drawing-pic{
+			padding: 9rem 7rem 0rem 5rem;
+			@include tablet {
+				padding: 7rem 4rem 0rem 1rem;
+			}
+			@include mobile {
+				padding: 4rem 3rem 0rem 1rem;
+			}
+			@include mobileSmall {
+				padding: 3.5rem 2.5rem 0rem 1rem;
+
+			}
+		}
+	}
+	.writer {
+		.ball {
+			left: 49%;
+			top: 28%;
+			@include mobile {
+				left: 46%;
+				top: 27%;
+			}
+		}
+		.title {
+			top: 32%;
+			left: -23%;
+			transform: rotate(-15deg);
+			@include mobile {
+				top: 32%;
+				left: -16%;
+				transform: rotate(17deg);
+			}
+			@include mobileSmall {
+				top: auto;
+				left: -23px;
+				bottom: 16px;
+				transform: rotate(0deg);
+				width: 65%;
+			}
+		}
+	}
+	.keyboard {
+		.ball {
+			left: 30%;
+			top: 56%;
+			@include mobile {
+				left: 29%;
+				top: 56%;       
+			}
+		}
+		.title {
+			top: 20%;
+			left: -14%;
+			transform: rotate(-9deg);
+			@include tablet {
+				top: 17%;
+				left: -15%;
+				transform: rotate(-8deg);
+			}
+			@include tabletSmall {
+				top: 17%;
+				left: -1%;
+				transform: rotate(-8deg);
+			}
+			@include mobile {
+				top: 4%;
+				left: 0%;
+				transform: rotate(-11deg);
+			}
+			@include mobileSmall {
+				top: 0%;
+				left: 0%;
+				transform: rotate(-8deg);
+			}
+		
+		}
+	}
+	.backpack {
+		.ball {
+			right: 21%;
+			top: 46%;
+			@include mobile {
+				right: 19%;
+				top: 43%;
+			}
+		}
+		.title {
+			bottom: 33%;
+			right: -27%;
+			transform: rotate(-11deg);
+			@include mobile {
+				bottom: 27%;
+				right: -20%;
+				transform: rotate(12deg);     
+			}
+			@include mobileSmall {
+				bottom: 29%;
+				right: -15%;
+				transform: rotate(0deg);
+			}
+		}
+	}
+	.roots {
+		.ball {
+			left: 37%;
+			bottom: 23%;
+			@include mobile {
+				left: 35%;
+				bottom: 28%;
+			}
+		}
+		.title {
+			bottom: 36%;
+			left: -21%;
+			transform: rotate(-18deg);
+			@include mobile {
+				bottom: 33%;
+				left: -8%;
+				transform: rotate(-18deg);
+				font-size: 12px;
+
+			}
+			@include mobileSmall {
+				bottom: 37%;
+				left: -8%;
+				font-size: 10px;
+				transform: rotate(-12deg);
+			}
+			@include tablet {
+				bottom: 33%;
+				left: -5%;
+				transform: rotate(-12deg);
+			}
+		}
+		.line-drawing-pic {
+			padding: 16rem 0 2rem 13.7rem;
+			@include mobile {
+				padding: 9rem 0 2rem 7rem;
+			}
+			@include mobileSmall {
+				padding: 8rem 0 2rem 6rem;
+			}
+		}
+	}
+	
+}
